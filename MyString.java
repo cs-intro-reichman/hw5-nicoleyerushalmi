@@ -44,7 +44,7 @@ public class MyString {
      * @param str2 - a string
      * @return true is str1 is a subset of str2, false otherwise
      */
-    public static boolean subsetOf(String str2, String str1) {
+    public static boolean subsetOf(String str1, String str2) {
         //// Replace the following statement with your code
         boolean bool = true;
         if ((str1.length() == 0)) {
@@ -145,11 +145,11 @@ public class MyString {
     public static String remove(String str1, String str2) {
         //// Replace the following statement with your code
         String not_used = "";
-                for(int i = 0; i < str1.length(); i++){
+            for(int i = 0; i < str2.length(); i++){
             // all str1 letters
-            char ch = str1.charAt(i);
-            for ( int k = 0; k < str2.length(); k++ ){
-                if ((ch == str2.charAt(k))) {
+            char ch = str2.charAt(i);
+            for ( int k = 0; k < str1.length(); k++ ){
+                if ((ch == str1.charAt(k))) {
                     not_used = not_used.substring(0, i) + not_used.substring(i + 1);
                     }
                 }
