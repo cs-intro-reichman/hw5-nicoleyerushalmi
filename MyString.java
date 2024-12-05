@@ -44,7 +44,7 @@ public class MyString {
      * @param str2 - a string
      * @return true is str1 is a subset of str2, false otherwise
      */
-    public static boolean subsetOf(String str1, String str2) {
+    public static boolean subsetOf(String str2, String str1) {
         //// Replace the following statement with your code
         boolean bool = true;
         if ((str1.length() == 0)) {
