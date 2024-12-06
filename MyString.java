@@ -61,10 +61,10 @@ public class MyString {
                     break;
                 }
             }
-            for(int t = 0; t< arr.length; t++){
-                if (arr[t] == false) {
-                    return false;
                 }
+                for(int t = 0; t< arr.length; t++){
+                    if (arr[t] == false) {
+                        return false;
             }
         }
             
