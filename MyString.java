@@ -56,7 +56,7 @@ public class MyString {
         for(int i = 0; i < str1.length(); i ++){
             char ch = str1.charAt(i);
             boolean found = false;
-            for(int k = i; k < str2.length(); k++){
+            for(int k = 0; k < str2.length(); k++){
                 if (ch == str2.charAt(k) && !arr[k]) {
                     arr[k] = true;
                     found = true;
