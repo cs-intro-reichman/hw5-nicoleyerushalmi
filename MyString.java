@@ -159,18 +159,16 @@ public class MyString {
             char ch = str2.charAt(i);
             for ( int k = 0; k < arr.length; k++ ){
                 if ((ch == arr[k])) {
-                    arr[k] = ' ';
+                    arr[k] = '\0';
                     }
                     break;
                     }
                 }
                 for(int k = 0; k < arr.length; k++){
-                    if(arr[k] == ' '){
-                        k++;
-                        break;
+                    if(arr[k] == '\0'){
+                        new_string += arr[k];
                     }
 
-                    new_string = new_string + arr[k];
                 }
 
         return new_string;
