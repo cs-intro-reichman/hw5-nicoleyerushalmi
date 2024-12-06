@@ -52,24 +52,23 @@ public class MyString {
         if ((str1.length() == 0)) {
             return true;
         }
-        boolean[] arr = new boolean[str1.length()];
-        for(int i = 0; i < str2.length(); i ++){
-            
-            for(int k = i; k < str1.length(); k++){
-                if (str1.charAt(k) == str2.charAt(i)) {
-                    arr[k - i] = true;
+        boolean[] arr = new boolean[str2.length()];
+        for(int i = 0; i < str1.length(); i ++){
+            char ch = str1.charAt(i);
+            boolean found = false;
+            for(int k = i; k < str2.length(); k++){
+                if (ch == str2.charAt(k) && !arr[k]) {
+                    arr[k] = true;
+                    found = true;
                     break;
                 }
             }
-                }
-                for(int t = 0; t< arr.length; t++){
-                    if (arr[t] == false) {
-                        return false;
+            if(!found){
+                return false;
             }
-        }
-            
-        return true;
     }
+    return true;
+}
 
     /**
      * Returns a string which is the same as the given string, with a space
