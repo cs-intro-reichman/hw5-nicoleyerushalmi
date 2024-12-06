@@ -46,7 +46,8 @@ public class MyString {
      */
     public static boolean subsetOf(String str1, String str2) {
         //// Replace the following statement with your code
-        boolean bool = true;
+        boolean bool = false;
+        String new_string = "";
         if ((str1.length() == 0)) {
             return true;
         }
@@ -54,16 +55,15 @@ public class MyString {
         for (int i = 0; i <= str2.length() - str1.length(); i++) {
             bool = true;
             for (int t = 0; t < str1.length(); t++) {
-                if (str2.charAt(i + t) != str1.charAt(t)) {
-                    bool = false;
+                if (str2.charAt(i) == str1.charAt(t)) {
+                    bool = true;
                     break;
+                    
                 }
             }
-            if (bool) {
-                return true;
+            
             }
-        }
-        return false;
+        return bool;
     }
 
     /**
@@ -149,8 +149,12 @@ public class MyString {
             for(int i = 0; i < str2.length(); i++){
             // all str1 letters
             char ch = str2.charAt(i);
+            boolean bool = false;
             for ( int k = 0; k < str1.length(); k++ ){
                 if ((ch == str1.charAt(k))) {
+                    bool = true;
+                    }
+                    if(bool == true){
                     str1 = str1.substring(0, k) + str1.substring(k + 1);
                     str2 = str2.substring(0, i) + str2.substring( i + 1);
                     }
@@ -158,7 +162,7 @@ public class MyString {
 
             }
 
-        return str2;
+        return str1;
     }
 
     /**
