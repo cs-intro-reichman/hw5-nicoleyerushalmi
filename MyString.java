@@ -47,26 +47,27 @@ public class MyString {
     public static boolean subsetOf(String str1, String str2) {
         //// Replace the following statement with your code
         boolean bool = false;
+        
         String new_string = "";
         if ((str1.length() == 0)) {
             return true;
         }
-
-        for (int i = 0; i <= str2.length() - str1.length(); i++) {
-            bool = true;
-            for (int t = 0; t < str1.length(); t++) {
-                if (str2.charAt(i) == str1.charAt(t)) {
-                    str2 = str2.substring(0,t) + str2.substring(t + 1);
-                    bool = true;
+        boolean[] arr = new boolean[str1.length()];
+        for(int i = 0; i < str2.length(); i ++){
+            
+            for(int k = i; k < str1.length(); k++){
+                if (str1.charAt(k) == str2.charAt(i)) {
+                    arr[k - i] = true;
                     break;
-                    
                 }
             }
+            for(int t = 0; t< arr.length; t++){
+                if (arr[t] == false) {
+                    return false;
+                }
             }
-            if(bool == false){
-                return false;
+        }
             
-            }
         return true;
     }
 
@@ -149,23 +150,29 @@ public class MyString {
     public static String remove(String str1, String str2) {
         //// Replace the following statement with your code
         String not_used = "";
-        
+        String new_string = "";
+        char arr[] = new char[str1.length()];
+        for(int t = 0; t < str1.length(); t++){
+            arr[t] = str1.charAt(t);
+        }
             for(int i = 0; i < str2.length(); i++){
-            // all str1 letters
+            // all str2 letters
             char ch = str2.charAt(i);
-            boolean bool = false;
-            for ( int k = 0; k < str1.length(); k++ ){
-                if ((ch == str1.charAt(k))) {
-                    bool = true;
+            for ( int k = 0; k < arr.length; k++ ){
+                if ((ch == arr[k])) {
+                    arr[k] = ' ';
                     }
-                    if(bool == true){
-                    str1 = str1.substring(0, k) + str1.substring(k + 1);
-                    str2 = str2.substring(0, i) + str2.substring( i + 1);
                     break;
                     }
                 }
+                for(int k = 0; k < arr.length; k++){
+                    if(arr[k] == ' '){
+                        k++;
+                        break;
+                    }
 
-            }
+                    new_string = new_string + arr[k];
+                }
 
         return str1;
     }
