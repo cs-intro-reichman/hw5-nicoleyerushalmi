@@ -145,17 +145,20 @@ public class MyString {
     public static String remove(String str1, String str2) {
         //// Replace the following statement with your code
         String not_used = "";
+        
             for(int i = 0; i < str2.length(); i++){
             // all str1 letters
             char ch = str2.charAt(i);
             for ( int k = 0; k < str1.length(); k++ ){
                 if ((ch == str1.charAt(k))) {
-                    not_used = not_used.substring(0, i) + not_used.substring(i + 1);
+                    str1 = str1.substring(0, k) + str1.substring(k + 1);
+                    str2 = str2.substring(0, i) + str2.substring( i + 1);
                     }
                 }
+
             }
 
-        return not_used;
+        return str2;
     }
 
     /**
