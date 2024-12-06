@@ -54,20 +54,20 @@ public class MyString {
 
         for (int i = 0; i <= str2.length() - str1.length(); i++) {
             bool = true;
-            Int j = 0;
             for (int t = 0; t < str1.length(); t++) {
                 if (str2.charAt(i) == str1.charAt(t)) {
-                    j ++;
+                    str2 = str2.substring(0,t) + str2.substring(t + 1);
+                    bool = true;
                     break;
                     
                 }
             }
-            if(j == str1.length()){
-                bool = true;
             }
+            if(bool == false){
+                return false;
             
             }
-        return bool;
+        return true;
     }
 
     /**
