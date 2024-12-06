@@ -174,7 +174,7 @@ public class MyString {
                     new_string = new_string + arr[k];
                 }
 
-        return str1;
+        return new_string;
     }
 
     /**
