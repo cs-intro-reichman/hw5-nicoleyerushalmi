@@ -166,7 +166,7 @@ public class MyString {
                     }
                 }
                 for(int k = 0; k < arr.length; k++){
-                    if(arr[k] == '\0'){
+                    if(arr[k] != '\0'){
                         new_string += arr[k];
                     }
 
