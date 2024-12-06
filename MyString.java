@@ -54,12 +54,16 @@ public class MyString {
 
         for (int i = 0; i <= str2.length() - str1.length(); i++) {
             bool = true;
+            Int j = 0;
             for (int t = 0; t < str1.length(); t++) {
                 if (str2.charAt(i) == str1.charAt(t)) {
-                    bool = true;
+                    j ++;
                     break;
                     
                 }
+            }
+            if(j == str1.length()){
+                bool = true;
             }
             
             }
@@ -157,6 +161,7 @@ public class MyString {
                     if(bool == true){
                     str1 = str1.substring(0, k) + str1.substring(k + 1);
                     str2 = str2.substring(0, i) + str2.substring( i + 1);
+                    break;
                     }
                 }
 
