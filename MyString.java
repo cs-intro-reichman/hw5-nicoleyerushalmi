@@ -160,8 +160,9 @@ public class MyString {
             for ( int k = 0; k < arr.length; k++ ){
                 if ((ch == arr[k])) {
                     arr[k] = '\0';
-                    }
                     break;
+                    }
+                    
                     }
                 }
                 for(int k = 0; k < arr.length; k++){
