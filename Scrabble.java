@@ -65,8 +65,8 @@ public class Scrabble {
 		int score = 0;
 		word = word.toLowerCase();
 		for(int i=0; i<word.length(); i++){
-			int char_place = word.charAt(i);
-			System.out.println("char place: "+char_place);
+			int char_place = word.charAt(i) - 'a';
+			//System.out.println("char place: "+char_place);
 			score += SCRABBLE_LETTER_VALUES[char_place];
 		}
 		if (word.length() == 10) {
