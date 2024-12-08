@@ -113,8 +113,12 @@ public class Scrabble {
 				break;
 			}
 			//// Replace the following break statement with code
-			hand = MyString.remove(input, hand);
-			score += wordScore(input);
+			if ((MyString.subsetOf(input,hand))) {
+				hand = MyString.remove(input, hand);
+				score += wordScore(input);
+				System.out.println("'" +input+ "'" + " - > score: ");
+			}
+			
 		if (hand.length() == 0) {
 	        System.out.println("Ran out of letters. Total score: " + score + " points");
 		} else {
