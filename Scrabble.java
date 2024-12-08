@@ -111,6 +111,7 @@ public class Scrabble {
 			// end-of-line characters.
 			String input = in.readString();
 			if ((input.equals(".") )) {
+				System.out.println("End of hand. Total score: " + score + "points");
 				break;
 			}
 			//// Replace the following break statement with code
@@ -118,6 +119,7 @@ public class Scrabble {
 				counter++;
 				hand = MyString.remove(input, hand);
 				score += wordScore(input);
+				System.out.println(" Expected sequence of plays: ");
 				System.out.println(counter + ". " + "'" +input+ "'" + " -> score: ");
 			}
 			
