@@ -120,14 +120,13 @@ public class Scrabble {
 				hand = MyString.remove(input, hand);
 				score += wordScore(input);
 				System.out.println(" Expected sequence of plays: ");
-				System.out.println(counter + ". " + "'" +input+ "'" + " -> score: ");
+				System.out.println(counter + ". " + "'" +input+ "'" + " -> score: " + score);
 			}
-			
-		if (hand.length() == 0) {
-	        System.out.println("Ran out of letters. Total score: " + score + " points");
-		} else {
-			System.out.println("End of hand. Total score: " + score + " points");
-		}
+	}
+	if (hand.length() == 0) {
+		System.out.println("Ran out of letters. Total score: " + score + " points");
+	} else {
+		System.out.println("End of hand. Total score: " + score + " points");
 	}
 } 
 
@@ -147,13 +146,15 @@ public class Scrabble {
 			//// Replace the following break statement with code
 			//// that completes the game playing loop
 			if ((!input.equals("e"))) {
+				System.out.println("end game");
 				break;
-			}
+			}else{
 			if ((input.equals("n"))) {
 				playHand(createHand());
 			}else{System.out.println("eror");}
 		
 		}
+	}
 	}
 
 	public static void main(String[] args) {
