@@ -69,6 +69,7 @@ public class Scrabble {
 			//System.out.println("char place: "+char_place);
 			score += SCRABBLE_LETTER_VALUES[char_place];
 		}
+		score = score*word.length();
 		if (word.length() == 10) {
 			score +=50;
 		}
