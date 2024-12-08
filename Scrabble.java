@@ -132,14 +132,14 @@ public class Scrabble {
 		// coming from the keyboard. Used for getting the user's inputs.  
 		In in = new In();
 		String input = in.readString();
-		while(input != "e") {
+		while(!input.equals("e")) {
 			System.out.println("Enter n to deal a new hand, or e to end the game:");
 			// Gets the user's input, which is all the characters entered by 
 			// the user until the user enter the ENTER character.
 			input = in.readString();
 			//// Replace the following break statement with code
 			//// that completes the game playing loop
-			if ((input == "n")) {
+			if ((input.equals("n"))) {
 				playHand(createHand());
 			}else{System.out.println("eror");}
 		
