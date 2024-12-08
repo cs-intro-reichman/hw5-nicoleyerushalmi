@@ -130,7 +130,7 @@ public class Scrabble {
 			
 			}
 			if (hand.length() == 0 && counter > 0) {
-				System.out.println("Ran out of letters. Total score: " + score + " points");
+				//System.out.println("Ran out of letters. Total score: " + score + " points");
 	}
 	
 } 
