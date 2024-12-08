@@ -120,7 +120,7 @@ public class Scrabble {
 				counter++;
 				hand = MyString.remove(input, hand);
 				score += wordScore(input);
-				System.out.println(counter + ". '" + input + "' -> score: " + score);
+				System.out.println(counter + ". '" + input + "' -> score: " + wordScore(input) + "\n");
 			} else {
 				System.out.println("Invalid word, please try again.");
 			}
