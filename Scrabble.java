@@ -112,6 +112,7 @@ public class Scrabble {
 			// end-of-line characters.
 			String input = in.readString();
 			if ((input.equals(".") )) {
+				System.out.println("End of hand. Total score: " + score + " points");
 				break;
 			}
 			//// Replace the following break statement with code
@@ -119,16 +120,13 @@ public class Scrabble {
 				counter++;
 				hand = MyString.remove(input, hand);
 				score += wordScore(input);
-				System.out.println(counter + ". '" + input + "' -> score: " + score);
+				System.out.println(counter + ". '" + input + "' -> score: " + score +"\n");
 			} else {
 				System.out.println("Invalid word, please try again.");
 			}
-			
 	}
 	if (hand.length() == 0) {
         System.out.println("Ran out of letters. Total score: " + score + " points");
-    } else {
-        System.out.println("End of hand. Total score: " + score + " points\n");
     }
 } 
 
