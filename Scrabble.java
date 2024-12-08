@@ -139,12 +139,11 @@ public class Scrabble {
 		// The variable in is set to represent the stream of characters 
 		// coming from the keyboard. Used for getting the user's inputs.  
 		In in = new In();
-		String input = in.readString();
 		while(true) {
 			System.out.println("Enter n to deal a new hand, or e to end the game:");
 			// Gets the user's input, which is all the characters entered by 
 			// the user until the user enter the ENTER character.
-			input = in.readString();
+			String input = in.readString();
 			//// Replace the following break statement with code
 			//// that completes the game playing loop
 			if ((!input.equals("e"))) {
