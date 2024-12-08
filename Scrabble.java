@@ -124,10 +124,11 @@ public class Scrabble {
 			} else {
 				System.out.println("Invalid word, please try again.");
 			}
+			if (hand.length() == 0) {
+				System.out.println("Ran out of letters. Total score: " + score + " points");
+			}
 	}
-	if (hand.length() == 0) {
-        System.out.println("Ran out of letters. Total score: " + score + " points");
-    }
+	
 } 
 
 	// Plays a Scrabble game. Prompts the user to enter 'n' for playing a new hand, or 'e'
