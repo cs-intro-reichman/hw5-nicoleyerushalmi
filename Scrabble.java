@@ -64,16 +64,18 @@ public class Scrabble {
 		//// Replace the following statement with your code
 		int score = 0;
 		word = word.toLowerCase();
+		for(int i=0; i<word.length(); i++){
+			int char_place = word.charAt(i)- 97;
+			System.out.println("char place: "+char_place);
+			score += SCRABBLE_LETTER_VALUES[char_place];
+		}
 		if (word.length() == 10) {
 			score +=50;
 		}
 		if ((MyString.subsetOf(word, "runi")) ==  true) {
 			score += 1000;
 		}
-		for(int i=0; i<word.length(); i++){
-			int char_place = word.charAt(i)- 97;
-			score += SCRABBLE_LETTER_VALUES[char_place];
-		}
+		
 		return score;
 	}
 
@@ -118,7 +120,7 @@ public class Scrabble {
 			System.out.println("End of hand. Total score: " + score + " points");
 		}
 	}
-}
+} 
 
 	// Plays a Scrabble game. Prompts the user to enter 'n' for playing a new hand, or 'e'
 	// to end the game. If the user enters any other input, writes an error message.
