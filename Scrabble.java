@@ -121,12 +121,16 @@ public class Scrabble {
 				hand = MyString.remove(input, hand);
 				score += wordScore(input);
 				System.out.println(counter + ". '" + input + "' -> score: " + score);
+			} else {
+				System.out.println("Invalid word, please try again.");
 			}
 			
 	}
 	if (hand.length() == 0) {
-		System.out.println("Ran out of letters. Total score: " + score + " points");
-	} 
+        System.out.println("Ran out of letters. Total score: " + score + " points");
+    } else {
+        System.out.println("End of hand. Total score: " + score + " points\n");
+    }
 } 
 
 	// Plays a Scrabble game. Prompts the user to enter 'n' for playing a new hand, or 'e'
