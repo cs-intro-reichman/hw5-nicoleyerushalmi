@@ -103,7 +103,7 @@ public class Scrabble {
 		// the stream of characters coming from the keyboard. Used for reading the user's inputs.   
 		In in = new In();
 		int counter = 0;
-		System.out.println("Expected sequence of plays:");
+		//System.out.println("Expected sequence of plays:");
 		while (hand.length() > 0) {
 			System.out.println("Current Hand: " + MyString.spacedString(hand));
 			System.out.println("Enter a word, or '.' to finish playing this hand:");
