@@ -112,6 +112,7 @@ public class Scrabble {
 			// end-of-line characters.
 			String input = in.readString();
 			if ((input.equals(".") )) {
+				System.out.println("End of hand. Total score: " + score + " points\n");
 				break;
 			}
 			//// Replace the following break statement with code
@@ -125,9 +126,7 @@ public class Scrabble {
 	}
 	if (hand.length() == 0) {
 		System.out.println("Ran out of letters. Total score: " + score + " points");
-	} else {
-		System.out.println("End of hand. Total score: " + score + " points\n");
-	}
+	} 
 } 
 
 	// Plays a Scrabble game. Prompts the user to enter 'n' for playing a new hand, or 'e'
