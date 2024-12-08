@@ -102,6 +102,7 @@ public class Scrabble {
 		// Declares the variable in to refer to an object of type In, and initializes it to represent
 		// the stream of characters coming from the keyboard. Used for reading the user's inputs.   
 		In in = new In();
+		int counter = 0;
 		while (hand.length() > 0) {
 			System.out.println("Current Hand: " + MyString.spacedString(hand));
 			System.out.println("Enter a word, or '.' to finish playing this hand:");
@@ -114,9 +115,10 @@ public class Scrabble {
 			}
 			//// Replace the following break statement with code
 			if ((MyString.subsetOf(input,hand))) {
+				counter++;
 				hand = MyString.remove(input, hand);
 				score += wordScore(input);
-				System.out.println("'" +input+ "'" + " - > score: ");
+				System.out.println(counter + ". " + "'" +input+ "'" + " -> score: ");
 			}
 			
 		if (hand.length() == 0) {
@@ -136,13 +138,16 @@ public class Scrabble {
 		// coming from the keyboard. Used for getting the user's inputs.  
 		In in = new In();
 		String input = in.readString();
-		while(!input.equals("e")) {
+		while(true) {
 			System.out.println("Enter n to deal a new hand, or e to end the game:");
 			// Gets the user's input, which is all the characters entered by 
 			// the user until the user enter the ENTER character.
 			input = in.readString();
 			//// Replace the following break statement with code
 			//// that completes the game playing loop
+			if ((!input.equals("e"))) {
+				break;
+			}
 			if ((input.equals("n"))) {
 				playHand(createHand());
 			}else{System.out.println("eror");}
