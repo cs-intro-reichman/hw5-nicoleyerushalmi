@@ -103,6 +103,7 @@ public class Scrabble {
 		// the stream of characters coming from the keyboard. Used for reading the user's inputs.   
 		In in = new In();
 		int counter = 0;
+		System.out.println(" Expected sequence of plays: ");
 		while (hand.length() > 0) {
 			System.out.println("Current Hand: " + MyString.spacedString(hand));
 			System.out.println("Enter a word, or '.' to finish playing this hand:");
@@ -111,7 +112,6 @@ public class Scrabble {
 			// end-of-line characters.
 			String input = in.readString();
 			if ((input.equals(".") )) {
-				System.out.println("End of hand. Total score: " + score + "points");
 				break;
 			}
 			//// Replace the following break statement with code
@@ -119,9 +119,9 @@ public class Scrabble {
 				counter++;
 				hand = MyString.remove(input, hand);
 				score += wordScore(input);
-				System.out.println(" Expected sequence of plays: ");
 				System.out.println(counter + ". " + "'" +input+ "'" + " -> score: " + score);
-			}
+			}else{System.out.println("Invalid word, please try again.");}
+			
 	}
 	if (hand.length() == 0) {
 		System.out.println("Ran out of letters. Total score: " + score + " points");
@@ -151,7 +151,7 @@ public class Scrabble {
 			}else{
 			if ((input.equals("n"))) {
 				playHand(createHand());
-			}else{System.out.println("eror");}
+			}else{System.out.println("Error: Invalid input. Please enter 'n' to deal a new hand or 'e' to end the game.\")");}
 		
 		}
 	}
