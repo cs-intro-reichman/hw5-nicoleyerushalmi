@@ -117,20 +117,21 @@ public class Scrabble {
 			}
 			//// Replace the following break statement with code
 			if ((MyString.subsetOf(input,hand))) {
-				System.out.println("  Expected sequence of plays:\r\n" + //
-										"");
+				//System.out.println("  Expected sequence of plays:\r\n" + //
+					//					"");
 				counter++;
 				hand = MyString.remove(input, hand);
 				score += wordScore(input);
-				//System.out.println(counter + ". '" + input + "' -> score: " + wordScore(input));
-				System.out.println(input + " earned " + score + " points. score: " + wordScore(input) + " points\n");
+				System.out.println(counter + ". '" + input + "' -> score: " + wordScore(input));
 			} else {
 				System.out.println("Invalid word, please try again.");
 			}
 			
 			}
-			if (hand.length() == 0 && counter > 0) {
+			if (hand.length() == 0) {
 				//System.out.println("Ran out of letters. Total score: " + score + " points");
+				System.out.println("End of hand. Total score: " + score + " points");
+
 	}
 	
 } 
