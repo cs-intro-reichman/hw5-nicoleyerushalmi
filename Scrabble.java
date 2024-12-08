@@ -117,6 +117,8 @@ public class Scrabble {
 			}
 			//// Replace the following break statement with code
 			if ((MyString.subsetOf(input,hand))) {
+				System.out.println("  Expected sequence of plays:\r\n" + //
+										"");
 				counter++;
 				hand = MyString.remove(input, hand);
 				score += wordScore(input);
