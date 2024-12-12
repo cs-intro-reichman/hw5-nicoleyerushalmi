@@ -112,27 +112,33 @@ public class Scrabble {
 			// end-of-line characters.
 			String input = in.readString();
 			if ((input.equals(".") )) {
-				System.out.println("End of hand. Total score: " + score + " points");
 				break;
 			}
 			//// Replace the following break statement with code
-			if ((MyString.subsetOf(input,hand))) {
-				//System.out.println("  Expected sequence of plays:\r\n" + //
-					//					"");
-				counter++;
-				hand = MyString.remove(input, hand);
-				score += wordScore(input);
-				System.out.printf("%d. '%s' -> score: %d\n", counter, input, wordScore(input));
+			if ((!MyString.subsetOf(input,hand))) {
+				System.out.println("Invalid word, try again.");
+				
+				// counter++;
+				
+				// System.out.printf("%d. '%s' -> score: %d\n", counter, input, wordScore(input));
 			} else {
-				System.out.println("Invalid word, please try again.");
+				if ((!isWordInDictionary(input))) {
+					System.out.println("No such word in the dictionary. Try again.");
+				}else{
+					hand = MyString.remove(input, hand);
+					score += wordScore(input);
+					System.out.println(input + "earned" + wordScore(input) + " points. score: " + score + " points\n");
+				}
+				
 			}
 			
 			}
 			if (hand.length() == 0) {
 				//System.out.println("Ran out of letters. Total score: " + score + " points");
-				System.out.println("End of hand. Total score: " + score + " points");
-
-	}
+				System.out.println("End of hand. Total score: " + score + " points");}
+				else{
+					System.out.println("End of hand. Total score: " + score + " points");
+				}
 	
 } 
 
