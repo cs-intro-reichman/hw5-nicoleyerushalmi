@@ -111,12 +111,12 @@ public class Scrabble {
 			// non-whitespace characters. Whitespace is either space characters, or  
 			// end-of-line characters.
 			String input = in.readString();
-			if ((input.equals(".") )) {
+			if (input.equals(".")) {
 				break;
 			}
 			//// Replace the following break statement with code
 			if ((!MyString.subsetOf(input,hand))) {
-				System.out.println("Invalid word. try again.");
+				System.out.println("Invalid word. Try again.");
 				
 				// counter++;
 				
