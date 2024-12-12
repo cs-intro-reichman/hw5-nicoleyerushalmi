@@ -116,7 +116,7 @@ public class Scrabble {
 			}
 			//// Replace the following break statement with code
 			if ((!MyString.subsetOf(input,hand))) {
-				System.out.println("Invalid word, try again.");
+				System.out.println("Invalid word. try again.");
 				
 				// counter++;
 				
@@ -127,7 +127,7 @@ public class Scrabble {
 				}else{
 					hand = MyString.remove(input, hand);
 					score += wordScore(input);
-					System.out.println(input + "earned" + wordScore(input) + " points. score: " + score + " points\n");
+					System.out.println(input + "earned "  + wordScore(input) + " points. score: " + score + " points\n");
 				}
 				
 			}
@@ -135,7 +135,8 @@ public class Scrabble {
 			}
 			if (hand.length() == 0) {
 				//System.out.println("Ran out of letters. Total score: " + score + " points");
-				System.out.println("End of hand. Total score: " + score + " points");}
+				System.out.println("Ran out of letters. Total score: " + score + " points");
+			}
 				else{
 					System.out.println("End of hand. Total score: " + score + " points");
 				}
